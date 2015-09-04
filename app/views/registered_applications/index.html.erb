@@ -1,0 +1,14 @@
+<h1>Registered Applications</h1>
+<table class="table table-striped">
+  <tr>
+    <th>Application Name</th>
+    <th>URL</th>
+  </tr>
+  <% @registered_applications.each do |app| %>
+    <tr>
+      <td><%= link_to app.name, app %></td>
+      <td><%= link_to app.URL, app.URL %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to "Register A New Application", new_registered_application_path, class: "btn btn-success" %>
