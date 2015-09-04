@@ -47,8 +47,16 @@ standard.save!
   user.skip_confirmation!
   user.save!
 end
-
 users = User.all
 
+# Create Registered Applications
+10.times do
+  app = RegisteredApplication.new(
+    name: Faker::Lorem.sentence,
+    URL: Faker::Internet.url
+  )
+  app.save!
+end
 
 puts "#{User.count} users were created."
+puts "#{RegisteredApplication.count} registered applications were created."

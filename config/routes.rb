@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
 
   resources :users, only: [:update] 
+  resources :registered_applications
 end
