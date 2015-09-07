@@ -1,2 +1,2 @@
-<h1>RegisteredApplications#show</h1>
-<p>Find me in app/views/registered_applications/show.html.erb</p>
+<h1><%= @registered_application.name %></h1>
+<p>There are <%= pluralize(@events.count,'event') %> associated with this application.</p>
