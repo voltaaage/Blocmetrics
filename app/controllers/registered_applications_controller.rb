@@ -48,8 +48,6 @@ class RegisteredApplicationsController < ApplicationController
     end
   end
 
-
-
   private
 
   def application_params
