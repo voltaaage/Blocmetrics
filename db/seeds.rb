@@ -53,7 +53,7 @@ users = User.all
 10.times do
   app = RegisteredApplication.new(
     name: Faker::Lorem.sentence,
-    URL: Faker::Internet.url
+    url: Faker::Internet.url
   )
   app.save!
 end
