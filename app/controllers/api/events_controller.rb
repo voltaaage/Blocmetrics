@@ -14,7 +14,7 @@ class API::EventsController < ApplicationController
     event = Event.new(event_params)
     event.registered_application = registered_application
 
-    if event.save!
+    if event.save
       render json: event, status: :created
     else
       render event.errors, status: :unprocessable_entity

@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150905203445) do
 
   create_table "registered_applications", force: :cascade do |t|
     t.string   "name"
-    t.string   "URL"
+    t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "user_id"
