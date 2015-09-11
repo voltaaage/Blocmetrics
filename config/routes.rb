@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :users, only: [:update] 
   resources :registered_applications
   namespace :api, defaults: { format: :json } do
-    match '/events', to: 'events#index', via: [:options]
+    match '/events', to: 'events#create', via: [:options]
     resources :events, only: [:create]
   end
 end
