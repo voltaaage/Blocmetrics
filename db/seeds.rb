@@ -59,14 +59,14 @@ users = User.all
 end
 registered_applications = RegisteredApplication.all
 
-25.times do
-  event = Event.new(
-    name: Faker::Lorem.sentence,
-    description: Faker::Lorem.paragraph,
-    registered_application: registered_applications.sample
-  )
-  event.save!
-end
+# 25.times do
+#   event = Event.new(
+#     name: Faker::Lorem.sentence,
+#     description: Faker::Lorem.paragraph,
+#     registered_application: registered_applications.sample
+#   )
+#   event.save!
+# end
 
 puts "#{User.count} users were created."
 puts "#{RegisteredApplication.count} registered applications were created."
