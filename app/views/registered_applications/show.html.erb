@@ -1,2 +1,11 @@
 <h1><%= @registered_application.name %></h1>
 <p>There are <%= pluralize(@events.count,'event') %> associated with this application.</p>
+
+<%= pie_chart @registered_application.events.group(:name).count %>
+<%= line_chart @registered_application.events.group("strftime('%Y-%m-%d', Events.created_at)").count %>
+
+<ul>
+  <% @registered_application.events.each do |event| %>
+    <li><%= event.name %> || <%= event.created_at %></li>
+  <% end %>
+</ul>

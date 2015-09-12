@@ -57,6 +57,12 @@ users = User.all
   )
   app.save!
 end
+blocipedia = RegisteredApplication.new(
+  name: "Blocipedia",
+  url: "http://localhost:4000"
+)
+blocipedia.save!
+
 registered_applications = RegisteredApplication.all
 
 # 25.times do

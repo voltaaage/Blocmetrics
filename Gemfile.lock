@@ -49,6 +49,7 @@ GEM
       sass (>= 3.3.0)
     builder (3.2.2)
     byebug (6.0.2)
+    chartkick (1.4.1)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -81,6 +82,8 @@ GEM
       thor (~> 0.14)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    groupdate (2.4.0)
+      activesupport (>= 3)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.7.0)
@@ -223,11 +226,13 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   byebug
+  chartkick
   coffee-rails (~> 4.1.0)
   devise
   factory_girl_rails (~> 4.0)
   faker
   figaro (= 1.0)
+  groupdate
   jbuilder (~> 2.0)
   jquery-rails
   pg
