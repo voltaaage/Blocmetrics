@@ -10,7 +10,8 @@ You will need to have another application to track events on. This metrics analy
 
 ##Setup steps:
 
-1. Add the following javascript snippet to your applications assets folder.
+*Add the following javascript snippet to your applications assets folder.
+  ```
     var blocmetrics = {};
     blocmetrics.report = function(eventName){
       var event = { name: eventName };
@@ -19,14 +20,17 @@ You will need to have another application to track events on. This metrics analy
       request.setRequestHeader('Content-Type','application/json');
       request.send(JSON.stringify(event));
     }
-2. Call the report function when you would like to track an event. A simple method is to add the following jQuery snippet to the page that you would like to track:
+  ```  
+*Call the report function when you would like to track an event. A simple method is to add the following jQuery snippet to the page that you would like to track:
+  ```
     <script type="text/javascript">
       $(document).ready(function(){
         blocmetrics.report("Viewed_page");
       });
     </script>
-3. Run Blocmetrics on port 3000.
-4. Run the tracked application on a different port.
-5. Add your application as a registered application. The url will be the HTTP origin of the application (ex: http://localhost:4000).
-5. Trigger the report function on your tracked application.
+  ```
+*Run Blocmetrics on port 3000.
+*Run the tracked application on a different port.
+*Add your application as a registered application. The url will be the HTTP origin of the application (ex: http://localhost:4000).
+*Trigger the report function on your tracked application.
 
